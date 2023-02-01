@@ -20,7 +20,7 @@ def get_code_manually():
 
     webbrowser.open(url, new=0, autoraise=True)
 
-code = 'd19cbbb61bfcf45f3e3b60516c7ca2da'
+code = 'eb47a096a8a1482a69a71390f694b54e'
 
 url_access_get = 'https://openapi.baidu.com/oauth/2.0/token?'\
     'grant_type=authorization_code&'\
@@ -31,8 +31,12 @@ url_access_get = 'https://openapi.baidu.com/oauth/2.0/token?'\
 
 resp = requests.get(url_access_get)
 data = resp.json()
-
-access_token = data['access_token']
+print(data)
+try:
+    access_token = data['access_token']
+    print(access_token)
+except:
+    print("token may expired or key error")
 
 user_quota(access_token)
 user_info(access_token)
