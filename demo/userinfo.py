@@ -14,7 +14,7 @@ from openapi_client.model.quotaresponse import Quotaresponse
 from openapi_client.model.uinforesponse import Uinforesponse
 from pprint import pprint
 
-def user_quota():
+def user_quota(access_token):
     """
     user_quota demo
     """
@@ -23,7 +23,7 @@ def user_quota():
         # Create an instance of the API class
         api_instance = userinfo_api.UserinfoApi(api_client)
 
-        access_token = "123.56c5d1f8eedf1f9404c547282c5dbcf4.YmmjpAlsjUFbPly3mJizVYqdfGDLsBaY5pyg3qL.a9IIIQ" # str | 
+        #access_token = "123.56c5d1f8eedf1f9404c547282c5dbcf4.YmmjpAlsjUFbPly3mJizVYqdfGDLsBaY5pyg3qL.a9IIIQ" # str | 
         checkexpire = 1 # int |  (optional)
         checkfree = 1 # int |  (optional)
 
@@ -36,7 +36,7 @@ def user_quota():
             print("Exception when calling UserinfoApi->apiquota: %s\n" % e) 
 
 
-def user_info():
+def user_info(access_token):
     """
     user_info demo
     """
@@ -44,7 +44,7 @@ def user_info():
     with openapi_client.ApiClient() as api_client:
         # Create an instance of the API class
         api_instance = userinfo_api.UserinfoApi(api_client)
-        access_token = "123.56c5d1f8eedf1f9404c547282c5dbcf4.YmmjpAlsjUFbPly3mJizVYqdfGDLsBaY5pyg3qL.a9IIIQ" # str | 
+        #access_token = "123.56c5d1f8eedf1f9404c547282c5dbcf4.YmmjpAlsjUFbPly3mJizVYqdfGDLsBaY5pyg3qL.a9IIIQ" # str | 
 
         # example passing only required values which don't have defaults set
         try:

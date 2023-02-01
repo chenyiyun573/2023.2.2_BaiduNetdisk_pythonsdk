@@ -3,6 +3,7 @@
 """
 import requests
 import webbrowser
+from userinfo import user_info,user_quota
 AppKey = '6d3F1VV1gymPdxKtVs39tFqXrVQG4VbY'
 AppID = '29976929'
 SecretKey = 'sSryrMwj4wYWVLnocgUUKuAUUzkyoGxG'
@@ -19,7 +20,7 @@ def get_code_manually():
 
     webbrowser.open(url, new=0, autoraise=True)
 
-code = 'db1a20c1a0e1c49a8cd32b5d5cdf1acc'
+code = 'd19cbbb61bfcf45f3e3b60516c7ca2da'
 
 url_access_get = 'https://openapi.baidu.com/oauth/2.0/token?'\
     'grant_type=authorization_code&'\
@@ -30,6 +31,9 @@ url_access_get = 'https://openapi.baidu.com/oauth/2.0/token?'\
 
 resp = requests.get(url_access_get)
 data = resp.json()
-print(data)
+
 access_token = data['access_token']
+
+user_quota(access_token)
+user_info(access_token)
 
