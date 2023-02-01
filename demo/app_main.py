@@ -20,7 +20,7 @@ def get_code_manually():
 
     webbrowser.open(url, new=0, autoraise=True)
 
-code = 'eb47a096a8a1482a69a71390f694b54e'
+code = '04077c3aaa4342a6b8c303c26fc7f2da'
 
 url_access_get = 'https://openapi.baidu.com/oauth/2.0/token?'\
     'grant_type=authorization_code&'\
