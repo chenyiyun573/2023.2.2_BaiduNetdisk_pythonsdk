@@ -96,7 +96,7 @@ def imagelist():
             print("Exception when calling FileinfoApi->xpanfileimagelist: %s\n" % e)
 
 
-def filelist():
+def filelist(access_token):
     """
     filelist
     """
@@ -104,11 +104,11 @@ def filelist():
     with openapi_client.ApiClient() as api_client:
         # Create an instance of the API class
         api_instance = fileinfo_api.FileinfoApi(api_client)
-        access_token = "123.56c5d1f8eedf1f9404c547282c5dbcf4.YmmjpAlsjUFbPly3mJizVYqdfGDLsBaY5pyg3qL.a9IIIQ"  # str |
+        # access_token = "123.56c5d1f8eedf1f9404c547282c5dbcf4.YmmjpAlsjUFbPly3mJizVYqdfGDLsBaY5pyg3qL.a9IIIQ"  # str |
         dir = "/"  # str |  (optional)
         folder = "0"  # str |  (optional)
         start = "0"  # str |  (optional)
-        limit = 2  # int |  (optional)
+        limit = 10  # int |  (optional)
         order = "time"  # str |  (optional)
         desc = 1  # int |  (optional)
         web = "web"  # str |  (optional)

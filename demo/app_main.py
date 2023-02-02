@@ -4,13 +4,15 @@
 import requests
 import webbrowser
 from userinfo import user_info,user_quota
+from fileinfo import filelist
+from upload import upload_test
+
 AppKey = '6d3F1VV1gymPdxKtVs39tFqXrVQG4VbY'
 AppID = '29976929'
 SecretKey = 'sSryrMwj4wYWVLnocgUUKuAUUzkyoGxG'
 Redirect_url = 'oob'
 
 def get_code_manually():
-
     url = 'http://openapi.baidu.com/oauth/2.0/authorize?'\
         'response_type=code&'\
         F'client_id={AppKey}&'\
@@ -20,7 +22,7 @@ def get_code_manually():
 
     webbrowser.open(url, new=0, autoraise=True)
 
-code = '04077c3aaa4342a6b8c303c26fc7f2da'
+code = '46b2fc0af8bef8a8b3d1dfb544743080'
 
 url_access_get = 'https://openapi.baidu.com/oauth/2.0/token?'\
     'grant_type=authorization_code&'\
@@ -38,6 +40,11 @@ try:
 except:
     print("token may expired or key error")
 
+"""
 user_quota(access_token)
 user_info(access_token)
+filelist(access_token)
+"""
+
+# upload_test(access_token)
 
